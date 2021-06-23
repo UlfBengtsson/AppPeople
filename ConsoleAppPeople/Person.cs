@@ -79,6 +79,9 @@ namespace ConsoleAppPeople
             IsVaccinated = vaccinated;
         }
 
-
+        public string Details()
+        {
+            return $"Name: {FullName}\nAge: {age}\nGender: {Gender}\nVaccinated: { (IsVaccinated ? "Yes" : "No") }";
+        }
     }
 }

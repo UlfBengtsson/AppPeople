@@ -6,8 +6,10 @@ namespace ConsoleAppPeople
 {
     public class Person
     {
+        static int idCounter = 0;
+        public static int Counter { get { return idCounter; } }
 
-
+        public readonly int id;
         string firstName;
         string lastName;//default value stats with is null.
         int age;//default value stats with is 0.
@@ -59,6 +61,7 @@ namespace ConsoleAppPeople
 
         public Person(string firstName, string lastName)
         {
+            id = ++idCounter;
             //Gender = Gender.Other;
             //IsVaccinated = false;
             FirstName = firstName;

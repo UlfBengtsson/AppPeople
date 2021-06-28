@@ -17,15 +17,16 @@ namespace ConsoleAppPeople
             //Console.WriteLine(anotherPerson.FullName);
             */
 
-            List<Person> people = InitPeopleList();
+            //List<Person> people = InitPeopleList();
 
-            AddPersonToList(people);
+            //AddPersonToList(people);
 
-            foreach (Person itemInList in people)
-            {
-                Console.WriteLine(itemInList.Details());
-            }
+            //foreach (Person itemInList in people)
+            //{
+            //    Console.WriteLine(itemInList.Details());
+            //}
 
+            
         }
 
         static List<Person> InitPeopleList()

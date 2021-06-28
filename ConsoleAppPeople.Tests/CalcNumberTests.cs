@@ -50,5 +50,18 @@ namespace ConsoleAppPeople.Tests
             //Assert
             Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void AddArrayOfNull()
+        {
+            //Arrange
+            double expected = 0;
+
+            //Act
+            double result = CalcNumber.Addition(null);
+
+            //Assert
+            Assert.Equal(expected, result);
+        }
     }
 }

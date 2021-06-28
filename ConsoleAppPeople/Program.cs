@@ -26,7 +26,6 @@ namespace ConsoleAppPeople
             //    Console.WriteLine(itemInList.Details());
             //}
 
-            
         }
 
         static List<Person> InitPeopleList()

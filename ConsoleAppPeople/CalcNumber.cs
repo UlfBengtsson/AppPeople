@@ -9,6 +9,10 @@ namespace ConsoleAppPeople
 
         public static double Addition(params double[] numbers)
         {
+            if (numbers == null)
+            {
+                return 0;
+            }
             double sum = 0;
             foreach (double num in numbers)
             {

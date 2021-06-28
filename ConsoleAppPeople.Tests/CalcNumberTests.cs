@@ -1,6 +1,7 @@
 ﻿using System;
 using Xunit;
 using ConsoleAppPeople;
+using System.Collections.Generic;
 
 namespace ConsoleAppPeople.Tests
 {
@@ -59,6 +60,40 @@ namespace ConsoleAppPeople.Tests
 
             //Act
             double result = CalcNumber.Addition(null);
+
+            //Assert
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void AddEmptyArray()
+        {
+            //Arrange
+            double expected = 0;
+
+            //Act
+            double result = CalcNumber.Addition(new double[0]);
+
+            //Assert
+            Assert.Equal(expected, result);
+        }
+
+
+        //Alternetiv way to use Theory
+        public static IEnumerable<object[]> GetNumbers()
+        {   //for AddArrayWithMemberData               numbers       expected                                         
+            yield return new object[] { new double[] { 5, 1, 3, 9 }, 18 };
+            yield return new object[] { new double[] { 7, 1, 5, 3 }, 16 };
+        }
+
+        [Theory]
+        [MemberData(nameof(GetNumbers))]
+        public void AddArrayWithMemberData(double[] numbers, int expected)
+        {
+            //Arrange
+
+            //Act
+            double result = CalcNumber.Addition(numbers);
 
             //Assert
             Assert.Equal(expected, result);
